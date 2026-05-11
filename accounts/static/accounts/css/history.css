@@ -1,0 +1,108 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f6fbfb;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+    padding: 15px 40px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.logo {
+    font-size: 32px;
+    font-weight: 900;
+    color: #0b4d4d;
+    position: relative;
+}
+
+.logo::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: #7de0d6;
+    margin-top: 5px;
+    border-radius: 5px;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-menu a {
+    margin-right: 14px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #0b4d4d;
+    text-decoration: none;
+    position: relative;
+    transition: 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #7de0d6;
+}
+
+.nav-menu a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 2px;
+    background: #7de0d6;
+    transition: 0.3s;
+}
+
+.nav-menu a:hover::after {
+    width: 100%;
+}
+
+/* logout */
+.btn-logout {
+    background: #7de0d6;
+    padding: 8px 18px;
+    border-radius: 20px;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn-logout:hover {
+    background: #63cfc4;
+    transform: scale(1.05);
+}
+
+/* ================= TITLE ================= */
+.title {
+    color: #0b4d4d;
+    font-weight: 900;
+}
+
+/* ================= TABLE BOX ================= */
+.history-box {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+/* table header */
+.table thead {
+    background: #0b4d4d;
+    color: white;
+}
+
+/* hover row */
+.table tbody tr:hover {
+    background: #f0fdfc;
+}

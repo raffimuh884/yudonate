@@ -1,0 +1,178 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f6fbfb;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+    padding: 15px 40px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+/* LOGO */
+.logo {
+    font-size: 32px;
+    font-weight: 900;
+    color: #0b4d4d;
+    letter-spacing: 2px;
+    font-family: Arial, sans-serif;
+    position: relative;
+}
+
+/* underline logo */
+.logo::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: #7de0d6;
+    margin-top: 5px;
+    border-radius: 5px;
+}
+
+/* RIGHT NAV WRAPPER */
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* ================= MENU ================= */
+.nav-menu a {
+    margin-right: 14px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #0b4d4d;   /* SAME AS LOGO */
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-family: Arial, sans-serif;
+    position: relative;
+    transition: 0.3s;
+    text-transform: capitalize;
+}
+
+/* hover color */
+.nav-menu a:hover {
+    color: #7de0d6;
+}
+
+/* underline animation */
+.nav-menu a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 2px;
+    background: #7de0d6;
+    transition: 0.3s;
+}
+
+.nav-menu a:hover::after {
+    width: 100%;
+}
+
+/* ================= LOGOUT BUTTON ================= */
+.btn-logout {
+    background: #7de0d6;
+    border-radius: 20px;
+    padding: 8px 18px;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn-logout:hover {
+    background: #63cfc4;
+    transform: scale(1.05);
+}
+
+/* ================= HERO ================= */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 80px;
+    gap: 60px;
+    flex-direction: row-reverse; /* INI KUNCINYA */
+}
+
+/* TEXT */
+.hero-text {
+    max-width: 50%;
+}
+
+.hero-text h6 {
+    color: #0b4d4d;
+    letter-spacing: 1px;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    font-weight: bold;
+    color: #0b4d4d;
+    line-height: 1.2;
+}
+
+.hero-text p {
+    margin-top: 15px;
+    color: #444;
+    line-height: 1.6;
+}
+
+/* BUTTON */
+.btn-donate {
+    margin-top: 20px;
+    background: #ff6b6b;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-donate:hover {
+    background: #ff4b4b;
+    transform: translateY(-2px);
+}
+
+/* IMAGE */
+.hero-img img {
+    width: 500px;
+    max-width: 100%;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+    .hero-text {
+        max-width: 100%;
+    }
+
+    .hero-text h1 {
+        font-size: 36px;
+    }
+
+    .nav-right {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-menu a {
+        display: inline-block;
+        margin: 5px 8px;
+    }
+}
